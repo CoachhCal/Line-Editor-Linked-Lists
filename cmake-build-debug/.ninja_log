@@ -1,0 +1,5 @@
+# ninja log v6
+2	554	7665397424020998	CMakeFiles/edit.dir/src/main.cpp.obj	d91e6faf60fcab6d
+5	696	7665397424044157	CMakeFiles/edit.dir/src/linked_list.cpp.obj	7dba8a13f0cc4945
+7	753	7665397424068519	CMakeFiles/edit.dir/src/app.cpp.obj	7453a23565f00e95
+753	831	7665397431526779	edit.exe	58861cccc0118343
