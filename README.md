@@ -1,6 +1,6 @@
 # Line Editor
 
-A simple command-line text editor built in C++ using linked lists to store each line separately. This editor allows users to create, modify, and save text files using intuitive commands.
+A simple command-line text editor built in C++ using linked lists to store each line separately. Supports inserting, deleting, and listing text with intuitive commands. Allows editing new or existing files and saving changes seamlessly. Designed as part of a data structures course project.
 
 ## Features
 
