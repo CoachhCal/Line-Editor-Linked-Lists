@@ -4,7 +4,9 @@
 
 int main(int argc, char** argv) {
 
-    app(argc, argv);
+    App app;
+    app.line_editor(argc, argv);
+
     return 0;
 
 }

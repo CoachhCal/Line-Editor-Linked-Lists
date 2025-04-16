@@ -5,9 +5,8 @@
 #include "app.h"
 
 LinkedList list;
-bool is_active = true;
 
-void app(int argc, char** argv) {
+void App::line_editor(int argc, char** argv) {
     if (argc != 2) {
         std::cerr << "Usage: " << argv[0] << " <filename>" << std::endl;
     }
@@ -37,7 +36,7 @@ void app(int argc, char** argv) {
     std::cout << list;
     std::string user_input;
 
-    while (is_active) {
+    while (_is_active) {
         std::cout << list._current_line << ">";
         std::getline(std::cin, user_input);
         handle_input(user_input, argv[1]);
@@ -45,7 +44,7 @@ void app(int argc, char** argv) {
     file.close();
 }
 
-void handle_input(std::string const& text, const std::string& file_name){
+void App::handle_input(std::string const& text, const std::string& file_name){
 
     std::string command;
     std::stringstream ss(text);
@@ -111,10 +110,10 @@ void handle_input(std::string const& text, const std::string& file_name){
         }
         else if (command == "E" && start == -1 && end == -1) {
             save_file(file_name);
-            is_active = false;
+            _is_active = false;
         }
         else if (command == "Q" && start == -1 && end == -1) {
-            is_active = false;
+            _is_active = false;
         }
         else {
             list.add(ss.str());
@@ -122,7 +121,7 @@ void handle_input(std::string const& text, const std::string& file_name){
     }
 }
 
-void save_file(const std::string& filename) {
+void App::save_file(const std::string& filename) {
     std::ofstream outfile(filename);
     if (!outfile.is_open()) {
         std::cerr << "Error: could not open file for saving " << filename << std::endl;
@@ -136,3 +135,4 @@ void save_file(const std::string& filename) {
         node = node->_next;
     }
 }
+

@@ -1,0 +1,40 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Line Editor\r\n\r\nA simple command-line text editor built in C++ using linked lists to store each line separately. This editor allows users to create, modify, and save text files using intuitive commands.\r\n\r\n## Features\r\n\r\n- **File Handling**: Open an existing file or create a new one via the command line.\r\n- **Linked List Storage**: Each line is stored as a separate node, enabling efficient insertion and deletion.\r\n- **Text Manipulation**:\r\n  - Insert new lines at specific positions.\r\n  - Delete single lines or ranges of lines.\r\n  - List full text or specific line ranges.\r\n- **Save & Exit**:\r\n  - Save changes (`E` command).\r\n  - Exit without saving (`Q` command).\r\n\r\n### Commands\r\n\r\n<details>\r\n  <summary>Click to expand command list</summary>\r\n\r\n| Command | Description |\r\n|---------|------------|\r\n| `I <n>` | Insert a line at position `n` |\r\n| `I` | Insert before current line |\r\n| `L` | List entire content |\r\n| `L <n>` | List line `n` and move to next line |\r\n| `L <m> <n>` | List range from `m` to `n` |\r\n| `D <n>` | Delete line `n` |\r\n| `D <m> <n>` | Delete range from `m` to `n` |\r\n| `D` | Delete previous line |\r\n| `E` | Save changes & exit |\r\n| `Q` | Exit without saving |\r\n\r\n</details>\r\n\r\n\r\n## Usage\r\n\r\nOnce in the projects folder, run:\r\n```sh\r\n./edit.exe <filename>\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision 1b526cdf9b296d2b814270f220fbc2cbe1024cb5)
++++ b/README.md	(date 1744836642573)
+@@ -1,6 +1,6 @@
+ # Line Editor
+ 
+-A simple command-line text editor built in C++ using linked lists to store each line separately. This editor allows users to create, modify, and save text files using intuitive commands.
++A simple command-line text editor built in C++ using linked lists to store each line separately. Supports inserting, deleting, and listing text with intuitive commands. Allows editing new or existing files and saving changes seamlessly. Designed as part of a data structures course project.
+ 
+ ## Features
+ 
+@@ -37,7 +37,7 @@
+ 
+ ## Usage
+ 
+-Once in the projects folder, run:
++Once in the cmake-build-debug folder, run:
+ ```sh
+-./edit.exe <filename>
++edit.exe <filename.txt>
+ 
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1744836642573)
++++ b/.gitignore	(date 1744836642573)
+@@ -0,0 +1,1 @@
++/cmake-build-debug/
+\ No newline at end of file
