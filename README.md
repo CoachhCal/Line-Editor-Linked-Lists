@@ -38,6 +38,7 @@ A simple command-line text editor built in C++ using linked lists to store each 
 ## Usage
 
 On the command line, navigate to the cmake-build-debug folder.
+
 Then, to run program:
 ```sh
 ./edit.exe <filename.txt>
