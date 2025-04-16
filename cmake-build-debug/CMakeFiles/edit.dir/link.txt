@@ -1,0 +1,3 @@
+C:\Users\calvi\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\edit.dir/objects.a
+C:\Users\calvi\AppData\Local\Programs\CLion\bin\mingw\bin\ar.exe qc CMakeFiles\edit.dir/objects.a @CMakeFiles\edit.dir\objects1.rsp
+C:\Users\calvi\AppData\Local\Programs\CLion\bin\mingw\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\edit.dir/objects.a -Wl,--no-whole-archive -o edit.exe -Wl,--out-implib,libedit.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\edit.dir\linkLibs.rsp
